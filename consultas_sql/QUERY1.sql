@@ -30,8 +30,8 @@ logradouro VARCHAR(100),
 bairro VARCHAR (50),
 numero INTEGER);*/
 
--- INSERTO
-
+-- INSER INTO
+-- Assentamento
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (110003100004, 'Agrovila do PA Estrela do Oeste', 19.192971, 'Cabixi');
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (110012200004, 'Agrovila do PA Itapirema', 15.600957, 'Ji-Paraná');
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (110013000005, 'Agrovila do PA Machadinho', 27.192576, 'Machadinho DOeste');
@@ -46,6 +46,29 @@ INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (120010400001, 'Agrovila do PA Quixada Vila do Incra - Km 26', 53.653261, 'Brasiléia');
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (241390400007, 'Agrovila do PCT Barbara', 30.637408, 'Gameleira');
 
+-- Municipio
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100031, 'Cabixi', 1102, 'Ji-Paraná', 110006, 'Vilhena');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100122, 'Ji-Paraná', 1102, 'Ji-Paraná', 110004, 'Ji-Paraná');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100205, 'Porto Velho', 1101, 'Porto Velho', 110001, 'Porto Velho');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100403, 'Alto Paraíso', 1101, 'Porto Velho', 110002, 'Ariquemes');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100809, 'Candeias do Jamari', 1101, 'Porto Velho', 110001, 'Porto Velho');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100940, 'Cujubim', 1101, 'Porto Velho', 110002, 'Ariquemes');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1101435, 'Nova União', 1102, 'Ji-Paraná', 110004, 'Ji-Paraná');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1101757, 'Vale do Anari', 1101, 'Porto Velho', 110003, 'Jaru');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1200104, 'Brasiléia', 1201, 'Rio Branco', 120002, 'Brasiléia');
+INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (2413904, 'Taipu', 2401, 'Natal', 240001, 'Natal');
+
+-- Estado -- PREENCHER
+INSERT INTO bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES ();
+
+-- Empresas Agrícolas -- PREENCHER
+INSERT INTO bd1_bdlmm_empresas_agricolas (cnpj, nome_empresarial, data_inicio_atividade, situacao_cadastral, logradouro, bairro, numero) VALUES ();
+
+-- Setor Censitário -- PREENCHER
+INSERT INTO bd1_bdlmm_setor_censitario (cod_setor, cod_aglomerado, populacao_total, area_km2, percentual_de_domicilios_particulares_ocupados_imputados, situacao) VALUES ();
 
 
 
