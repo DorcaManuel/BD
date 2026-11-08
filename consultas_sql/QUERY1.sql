@@ -50,8 +50,10 @@ INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100031, 'Cabixi', 1102, 'Ji-Paraná', 110006, 'Vilhena');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100122, 'Ji-Paraná', 1102, 'Ji-Paraná', 110004, 'Ji-Paraná');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
+//tiny problem - 
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
+// tiny problem 
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100205, 'Porto Velho', 1101, 'Porto Velho', 110001, 'Porto Velho');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100403, 'Alto Paraíso', 1101, 'Porto Velho', 110002, 'Ariquemes');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100809, 'Candeias do Jamari', 1101, 'Porto Velho', 110001, 'Porto Velho');
