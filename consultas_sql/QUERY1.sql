@@ -4,9 +4,9 @@
 cod_aglomerado INTEGER PRIMARY KEY,
 nome_aglomerado VARCHAR (100),
 area_total_assentamento INTEGER,
-distritos_abrangidos VARCHAR (50));*/
+distritos_abrangidos VARCHAR (50));
 
-/*CREATE TABLE bd1_bdlmm_municipio(
+CREATE TABLE bd1_bdlmm_municipio(
 cod_municipio INTEGER PRIMARY KEY,
 nome_municipio VARCHAR (100),
 cod_rgint INTEGER,
@@ -28,7 +28,9 @@ data_inicio_atividade DATE,
 situacao_cadastral INTEGER,
 logradouro VARCHAR(100),
 bairro VARCHAR (50),
-numero INTEGER);*/
+numero INTEGER);
+
+
 
 -- INSER INTO
 -- Assentamento
@@ -44,16 +46,12 @@ INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (110143500001, 'Agrovila do PA Palmares', 76.030723, 'Nova União');
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (110175700002, 'Agrovila do PA Jatuarana', 31.543873, 'Vale do Anari');
 INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (120010400001, 'Agrovila do PA Quixada Vila do Incra - Km 26', 53.653261, 'Brasiléia');
-INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (241390400007, 'Agrovila do PCT Barbara', 30.637408, 'Gameleira');
-
+INSERT INTO bd1_bdlmm_assentamento (cod_aglomerado, nome_aglomerado, area_total_assentamento, distritos_abrangidos) VALUES (241390400007, 'Agrovila do PCT Barbara', 30.637408, 'Gameleira');*/
+/*
 -- Municipio
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100031, 'Cabixi', 1102, 'Ji-Paraná', 110006, 'Vilhena');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100122, 'Ji-Paraná', 1102, 'Ji-Paraná', 110004, 'Ji-Paraná');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
-//tiny problem - 
-INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
-INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100130, 'Machadinho DOeste', 1101, 'Porto Velho', 110003, 'Jaru');
-// tiny problem 
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100205, 'Porto Velho', 1101, 'Porto Velho', 110001, 'Porto Velho');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100403, 'Alto Paraíso', 1101, 'Porto Velho', 110002, 'Ariquemes');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1100809, 'Candeias do Jamari', 1101, 'Porto Velho', 110001, 'Porto Velho');
@@ -62,18 +60,43 @@ INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1101757, 'Vale do Anari', 1101, 'Porto Velho', 110003, 'Jaru');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (1200104, 'Brasiléia', 1201, 'Rio Branco', 120002, 'Brasiléia');
 INSERT INTO bd1_bdlmm_municipio (cod_municipio, nome_municipio, cod_rgint, nome_rgint, cod_rgi, nome_rgi) VALUES (2413904, 'Taipu', 2401, 'Natal', 240001, 'Natal');
-
+*/
 -- Estado -- PREENCHER
-INSERT INTO bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES ();
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 11, 'Rodônia');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 12, 'Acre');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 13, 'Amazonas');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 14, 'Roraima');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 15, 'Pará');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 16, 'Amapá');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (1, 'Norte', 17, 'Tocantins');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 21, 'Maranhão');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 22, 'Piauí');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 23, 'Ceará');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 24, 'Rio Grande Do Norte');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 25, 'Paraíba');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 26, 'Pernanbuco');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 27, 'Alagoas');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 28, 'Sergipe');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (2, 'Nordeste', 29, 'Bahia');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (3, 'Sudeste', 31, 'Minas Gerais');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (3, 'Sudeste', 32, 'Espiríto Santos');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (3, 'Sudeste', 33, 'Rio de Janeiro');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (3, 'Sudeste', 35, 'São Paulo');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (4, 'Sul', 41, 'Paraná');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (4, 'Sul', 42, 'Santa Catarina');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (5, 'Centro-Oeste', 51, 'Mato Grosso');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (5, 'Centro-Oeste', 52, 'Goiais');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (5, 'Centro-Oeste', 50, 'Mato Grosso do Sul');
+INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) VALUES (5, 'Centro-Oeste', 53, 'Distrito Federal');
 
 -- Empresas Agrícolas -- PREENCHER
-INSERT INTO bd1_bdlmm_empresas_agricolas (cnpj, nome_empresarial, data_inicio_atividade, situacao_cadastral, logradouro, bairro, numero) VALUES ();
+--INSERT INTO bd1_bdlmm_empresas_agricolas (cnpj, nome_empresarial, data_inicio_atividade, situacao_cadastral, logradouro, bairro, numero) VALUES ();
 
 -- Setor Censitário -- PREENCHER
-INSERT INTO bd1_bdlmm_setor_censitario (cod_setor, cod_aglomerado, populacao_total, area_km2, percentual_de_domicilios_particulares_ocupados_imputados, situacao) VALUES ();
+--INSERT INTO bd1_bdlmm_setor_censitario (cod_setor, cod_aglomerado, populacao_total, area_km2, percentual_de_domicilios_particulares_ocupados_imputados, situacao) VALUES ();
 
 
-
+/*
 -- Consultas
 -- 1. aglomerado rurais no municipio de gameleira
 SELECT a.nome_aglomerado
@@ -138,4 +161,4 @@ WHERE
         FROM bd1_bdlmm_municipio m
         WHERE
             m.nome_municipio = 'São Paulo'
-    );
+    );*/
