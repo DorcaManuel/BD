@@ -31,7 +31,7 @@ data_inicio_atividade DATE,
 situacao_cadastral INTEGER,
 logradouro VARCHAR(100),
 bairro VARCHAR (50),
-numero INTEGER);
+numero VARCHAR(14));
 
 
 
@@ -186,3 +186,29 @@ WHERE
         WHERE
             m.nome_municipio = 'São Paulo'
     );*/
+
+
+
+--5. Explain Analyse 
+EXPLAIN ANALYZE
+SELECT
+    m.nome_municipio,
+    COUNT(s.cod_setor) AS quantidades_setores
+FROM bd1_bdlmm_municipio m
+JOIN bd1_bdlmm_assentamento a
+    ON a.cod_municipio = m.cod_municipio
+JOIN bd1_bdlmm_setor_censitario s
+    ON s.cod_aglomerado = a.cod_aglomerado
+WHERE s.populacao_total > 800
+GROUP BY m.nome_municipio;
+
+--5 de estado
+EXPLAIN ANALYZE
+SELECT a.nome_aglomerado
+FROM bd1_bdlmm_assentamento a
+WHERE EXISTS (
+    SELECT 1
+    FROM bd1_bdlmm_municipio m
+    WHERE m.cod_municipio = a.cod_municipio
+      AND m.nome_municipio = 'Gameleira'
+);
