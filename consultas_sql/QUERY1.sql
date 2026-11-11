@@ -120,34 +120,32 @@ INSERT INTO public.bd1_bdlmm_estado (cod_uf, nome_uf, cod_regiao, nome_regiao) V
 --INSERT INTO bd1_bdlmm_setor_censitario (cod_setor, cod_aglomerado, populacao_total, area_km2, percentual_de_domicilios_particulares_ocupados_imputados, situacao) VALUES ();
 
 
-/*
+
 -- Consultas
 -- 1. aglomerado rurais no municipio de gameleira
 SELECT a.nome_aglomerado
 FROM bd1_bdlmm_assentamento a
-WHERE
-    EXISTS (
-        SELECT R1
-        FROM bd1_bdlmm_municipio municipio
-        WHERE
-            m.cod_municipio = a.cod_municipio
-            AND m.nome_municipio = 'Gameleira'
-    )
+WHERE EXISTS (
+    SELECT 1
+    FROM bd1_bdlmm_municipio m
+    WHERE m.cod_municipio = a.cod_municipio
+      AND m.nome_municipio = 'Gameleira'
+);
 
 -- 2. Estados com percentual méio superior a 11% -- VERIFICAR SE ESTA CERTO
 SELECT e.nome_uf, AVG(
-        d.percentual_de_domicilios_particulares_ocupados_imputados
+        s.percentual_de_domicilios_particulares_ocupados_imputados
     ) AS media_percentual
 FROM
     bd1_bdlmm_estado e
-    JOIN bd1_bdlmm_municipio media_percentual ON m.cod_uf = e.cod_uf
+    JOIN bd1_bdlmm_municipio m ON m.cod_uf = e.cod_uf
     JOIN bd1_bdlmm_assentamento a ON a.cod_municipio = m.cod_municipio
     JOIN bd1_bdlmm_setor_censitario s ON s.cod_aglomerado = a.cod_aglomerado
 GROUP BY
     e.nome_uf
 HAVING
     AVG(
-        d.percentual_de_domicilios_particulares_ocupados_imputados
+        s.percentual_de_domicilios_particulares_ocupados_imputados
     ) > 0.11;
 
 -- 3. Municípios com setores de população superior a 800
@@ -169,24 +167,21 @@ FROM
     JOIN bd1_bdlmm_assentamento a ON a.cod_municipio = m.cod_municipio
     JOIN bd1_bdlmm_setor_censitario s ON s.cod_aglomerado = a.cod_aglomerado
 WHERE
-    s.situacao = "Rural"
+    s.situacao = 'Rural'
 GROUP BY
     e.nome_regiao
 HAVING
     SUM(s.area_km2) > 921;
 
 -- 5. Empresas agrícolas com logradouro do tipo estrada em São Paulo
-SELECT ea.nome_empresarial, ea.logradouro
+SELECT
+    ea.nome_empresarial,
+    ea.logradouro
 FROM bd1_bdlmm_empresas_agricolas ea
-WHERE
-    ea.logradouro LIKE '%Estrada%'
-    AND ea.cod_uf = (
-        SELECT m.cod_municipio
-        FROM bd1_bdlmm_municipio m
-        WHERE
-            m.nome_municipio = 'São Paulo'
-    );*/
-
+JOIN bd1_bdlmm_municipio m
+    ON ea.cod_municipio = m.cod_municipio
+WHERE ea.logradouro ILIKE '%Estrada%'
+  AND m.nome_municipio = 'São Paulo';
 
 
 --5. Explain Analyse 
